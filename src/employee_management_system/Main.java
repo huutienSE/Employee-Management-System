@@ -31,13 +31,8 @@ public class Main {
 			
 			while(true) {
 				try{
-					// kiem tra choice - phải la so nguyen (int): dung parseInt + nextLine() --> NumberFormatException
-					//				- chủ động kiểm tra hợp lệ 1<=choice <= 7: viet ChoiceValidator, throw excxception, IllegalArgumentException
 					System.out.print("Nhap vao lua chon cua ban: ");
-					
-					//choice = sc.nextInt(); // can kiem tra InputMismatchException, exception do Scanner, neu dung sc.nextInt() phai loai bo input sai trong buffer, viet dong lenh trong catch nhu sau: sc.next()
-					choice = Integer.parseInt(sc.nextLine()); //Can kiem tra NumberFormatException la mot cach chuyen kieu du lieu dau vao là String, parseInt(): chi nhan chuoi dau vao la cac ki tu chu so, so am co '-', neu kitu khac sẽ NumberFormatException
-					
+					choice = Integer.parseInt(sc.nextLine());
 					// validate choice
 					InputChoiceValidator.validateChoice(choice, MIN_CHOICE, MAX_CHOICE);
 					
@@ -52,20 +47,16 @@ public class Main {
 			}
 			
 			System.out.println("Nhap choice thanh cong, Hop le!");
-			// da nhap thanh cong choice
-			
-			//..........
-			
+
 			switch(choice) {
 				case 1:
 				{
-					// nhap thong tin nhân vien
 					System.out.println("Nhap vao thông tin nhan vien: ");
 					System.out.println("Ban muon them nhan vien Full-time hay Part-time?");
 					System.out.println("Nhap 1. Full-time \t 2. Part-time");
 					
 					int option = Main.inputEmployeeType(sc);
-					//
+					
 					Employee newEmployee = Main.inputEmployeeInformation(option, sc);
 					
 					boolean isSuccess = Main.handleDuplicateEmployee(newEmployee, manager,  sc);
@@ -91,24 +82,11 @@ public class Main {
 							System.out.println(e.toString());
 							System.out.println();
 						}
-						
-						/*
-						for(int i = 0; i < listEmployees.size(); i++) {
-							System.out.println(listEmployees.get(i).toString());
-						}
-						
-						Iterator<Employee> it = listEmployees.iterator();
-						
-						while(it.hasNext()) {
-							System.out.println(it.next().toString());
-						}
-						*/
 					}
 					break;
 				}
 				case 3:
 				{
-					// Tìm kiếm nhân viên theo ID
 					System.out.print("Nhap vao id nhan vien muon tim kiem: ");
 					String id = sc.nextLine();
 					System.out.println();

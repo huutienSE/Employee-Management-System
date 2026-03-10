@@ -34,9 +34,8 @@ public abstract class Employee implements Comparable<Employee> {
 		this.email = newEmail;
 	}
 	
-	// caculateSalary()
 	public abstract double caculateSalary(); // lương thực lĩnh
-	// toString()
+
 	@Override
 	public String toString() {
 		DecimalFormat df = new DecimalFormat("#,###.00");

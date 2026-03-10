@@ -17,7 +17,6 @@ public class EmployeeManager implements IEmployeeService {
 	
 	@Override
 	public void addEmployee(Employee newEmployee) throws DuplicateIdException, DuplicateEmailException {
-		// TODO Auto-generated method stub\
 		// kiem tra nhan vien trùng lặp
 		if(employeeMap.containsKey(newEmployee.getId())) {
 			throw new DuplicateIdException("Id da ton tai!");
@@ -39,7 +38,6 @@ public class EmployeeManager implements IEmployeeService {
 	@Override
 	public List<Employee> getAllEmployee() {
 		// danh sách in ra sẽ mặc định in tăng dần theo ID
-		
 		List<Employee> sortList = new ArrayList<Employee>(listEmployees);
 		
 		Collections.sort(sortList);
@@ -49,13 +47,6 @@ public class EmployeeManager implements IEmployeeService {
 
 	@Override
 	public Employee findEmployeeById(String id) throws EmployeeNotFoundException  {
-		// TODO Auto-generated method stub
-//		if(!employeeMap.containsKey(id)) {
-//			throw new EmployeeNotFoundException("Khong tim thay nhan vien co id: " + id);
-//		}
-//		
-//		return employeeMap.get(id);
-		
 		// uu diem chi can duyt map 1 lan
 		Employee emp = employeeMap.get(id);
 
@@ -80,14 +71,11 @@ public class EmployeeManager implements IEmployeeService {
 
 	@Override
 	public List<Employee> getTopHighestSalaryEmployees() {
-		// TODO Auto-generated method stub
 		
 		List<Employee> sortedList = new ArrayList<>(listEmployees);
-		
-		// sap xep giam dan
+	
 		Collections.sort(sortedList, new SalaryComparator());
-		//Collections.sort(sortedList, new SalaryComparator().reversed()); // nếu comparator mặc định viết tăng dần thì reversed sẽ là giảm dần
-		//Collections.sort(sortedList, (e1, e2) -> (Double.compare(e2.caculateSalary(), e1.caculateSalary()))); // java 8 lambda
+		
 		return sortedList;
 	}
 	
