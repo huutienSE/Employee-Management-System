@@ -1,20 +1,18 @@
-package employee_management_system;
+package com.ems.model;
 
 import java.text.DecimalFormat;
 
-public class PartTimeEmployee extends Employee {
-	private double workingHours;
-	private double rate; // luong theo gio
+public class FullTimeEmployee extends Employee {
+	private double bonus;
 	
-	PartTimeEmployee(String id, String name, double salary, String email, String phoneNumber, double workingHours, double rate){
+	FullTimeEmployee(String id, String name, double salary, String email, String phoneNumber, double bonus){
 		super(id, name, salary, email, phoneNumber);
-		this.workingHours = workingHours;
-		this.rate = rate;
+		this.bonus = bonus;
 	}
 	
 	@Override
 	public double caculateSalary() {
-		return super.salary + (workingHours * rate);
+		return super.salary + bonus;
 	}
 	
 	@Override
@@ -27,5 +25,4 @@ public class PartTimeEmployee extends Employee {
 				" Phone Number: " + phoneNumber + 
 				" Salary: " + df.format(this.caculateSalary());
 	}
-
 }

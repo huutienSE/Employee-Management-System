@@ -1,4 +1,4 @@
-package employee_management_system;
+package com.ems.model;
 import java.text.DecimalFormat;
 
 public abstract class Employee implements Comparable<Employee> {

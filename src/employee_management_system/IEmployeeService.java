@@ -1,6 +1,8 @@
 package employee_management_system;
 import java.util.List;
 
+import com.ems.model.Employee;
+
 public interface IEmployeeService {
 
 	void addEmployee (Employee newEmployee) throws DuplicateIdException, DuplicateEmailException;

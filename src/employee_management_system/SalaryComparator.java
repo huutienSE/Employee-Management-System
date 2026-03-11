@@ -1,6 +1,8 @@
 package employee_management_system;
 import java.util.Comparator;
 
+import com.ems.model.Employee;
+
 public class SalaryComparator implements Comparator<Employee> {
 	@Override
 	public int compare(Employee e1, Employee e2) {
