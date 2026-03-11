@@ -1,7 +1,10 @@
-package employee_management_system;
+package com.ems.service;
 import java.util.List;
 
 import com.ems.model.Employee;
+
+import employee_management_system.DuplicateEmailException;
+import employee_management_system.DuplicateIdException;
 
 public interface IEmployeeService {
 
