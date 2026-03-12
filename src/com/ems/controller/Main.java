@@ -1,4 +1,4 @@
-package employee_management_system;
+package com.ems.controller;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
