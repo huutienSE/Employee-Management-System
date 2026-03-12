@@ -1,4 +1,4 @@
-package employee_management_system;
+package com.ems.exception;
 
 public class EmployeeNotFoundException extends Exception {
 	public EmployeeNotFoundException() {
