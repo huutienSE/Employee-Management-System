@@ -1,26 +1,19 @@
-# Compiled files
 *.class
+*.log
 
-# Build folders
 bin/
 build/
 target/
+out/
 
-# IDE files
-.idea/
-*.iml
-
-# Eclipse
 .project
 .classpath
 .settings/
 
-# VS Code
+.idea/
+*.iml
+
 .vscode/
 
-# Logs
-*.log
-
-# OS files
 .DS_Store
 Thumbs.db
