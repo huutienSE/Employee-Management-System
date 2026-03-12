@@ -13,6 +13,15 @@ out/
 .idea/
 *.iml
 
+# Eclipse
+.project
+.classpath
+.settings/
+
+# IntelliJ
+.idea/
+*.iml
+
 .vscode/
 
 .DS_Store
