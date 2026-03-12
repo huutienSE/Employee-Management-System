@@ -1,31 +1,24 @@
 package com.ems.service;
 
-
-import com.ems.model.Employee;
-import com.ems.model.FullTimeEmployee;
-import com.ems.model.PartTimeEmployee;
-
-import com.ems.exception.DuplicateIdException;
-import com.ems.exception.DuplicateEmailException;
-import com.ems.exception.EmployeeNotFoundException;
-
-import com.ems.util.SalaryComparator;
-import com.ems.util.InputChoiceValidator;
-
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.Map;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import com.ems.exception.DuplicateEmailException;
+import com.ems.exception.DuplicateIdException;
+import com.ems.exception.EmployeeNotFoundException;
+import com.ems.model.Employee;
+import com.ems.util.SalaryComparator;
 
 
 public class EmployeeManager implements IEmployeeService {
 	private final List<Employee> listEmployees = new ArrayList<>();
 	private final Map<String, Employee> employeeMap = new HashMap<>();
 	private final Set<String> emailsSet = new HashSet<>();
-	
 	
 	@Override
 	public void addEmployee(Employee newEmployee) throws DuplicateIdException, DuplicateEmailException {

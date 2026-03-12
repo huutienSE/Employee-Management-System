@@ -1,9 +1,6 @@
 package com.ems.controller;
 
-import com.ems.model.Employee;
-import com.ems.model.FullTimeEmployee;
-import com.ems.model.PartTimeEmployee;
-
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -15,9 +12,6 @@ import com.ems.model.FullTimeEmployee;
 import com.ems.model.PartTimeEmployee;
 import com.ems.service.EmployeeManager;
 import com.ems.util.InputChoiceValidator;
-
-import java.util.List;
-import java.util.Iterator;
 
 public class Main {
 
@@ -41,8 +35,6 @@ public class Main {
 			int MIN_CHOICE = 1, MAX_CHOICE = 7;
 			
 			Scanner sc = new Scanner(System.in);
-			
-			
 			
 			while(true) {
 				try{
