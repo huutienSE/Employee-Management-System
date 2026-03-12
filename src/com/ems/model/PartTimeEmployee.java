@@ -6,7 +6,7 @@ public class PartTimeEmployee extends Employee {
 	private double workingHours;
 	private double rate; // luong theo gio
 	
-	PartTimeEmployee(String id, String name, double salary, String email, String phoneNumber, double workingHours, double rate){
+	public PartTimeEmployee(String id, String name, double salary, String email, String phoneNumber, double workingHours, double rate){
 		super(id, name, salary, email, phoneNumber);
 		this.workingHours = workingHours;
 		this.rate = rate;

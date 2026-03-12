@@ -1,4 +1,9 @@
 package com.ems.controller;
+
+import com.ems.model.Employee;
+import com.ems.model.FullTimeEmployee;
+import com.ems.model.PartTimeEmployee;
+
 import java.util.Scanner;
 import java.util.regex.Pattern;
 

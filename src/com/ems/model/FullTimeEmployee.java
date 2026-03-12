@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 public class FullTimeEmployee extends Employee {
 	private double bonus;
 	
-	FullTimeEmployee(String id, String name, double salary, String email, String phoneNumber, double bonus){
+	public FullTimeEmployee(String id, String name, double salary, String email, String phoneNumber, double bonus){
 		super(id, name, salary, email, phoneNumber);
 		this.bonus = bonus;
 	}
