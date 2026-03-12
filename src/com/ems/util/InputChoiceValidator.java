@@ -1,4 +1,4 @@
-package employee_management_system;
+package com.ems.util;
 import java.lang.IllegalArgumentException;
 
 public class InputChoiceValidator {

@@ -1,4 +1,4 @@
-package employee_management_system;
+package com.ems.util;
 import java.util.Comparator;
 
 import com.ems.model.Employee;
