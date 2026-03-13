@@ -30,6 +30,7 @@ The layers used in this project include:
 
 ## Project Structure
 
+'''
 src/com/ems
 │
 ├── controller
@@ -52,6 +53,8 @@ src/com/ems
 └── util
     ├── InputChoiceValidator.java
     └── SalaryComparator.java
+'''
+
 
 ## Technologies Used
 
